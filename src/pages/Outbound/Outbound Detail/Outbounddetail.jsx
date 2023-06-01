@@ -142,7 +142,6 @@ const Outbounddetail = () => {
                         return { ...obj, checker: "" }
                     })
                     setoutboundTableDetail(tempDataValue)
-                    console.log();
                 } else {
                     setopen(true)
                     setmessage("No Records for the order")
@@ -601,7 +600,6 @@ const Outbounddetail = () => {
         const id = event.target.name;
         const value = event.target.value;
         setoutboundheaderstate({ ...outboundheaderstate, [id]: value });
-        console.log(setoutboundheaderstate);
     }
 
 
@@ -907,23 +905,7 @@ const Outbounddetail = () => {
                 </div>
                 <TabStrip selected={selected} onSelect={handleSelect} style={{ margin: '10px' }}>
                     <TabStripTab title="Header">
-
-                    <div className='row mt-3'>
-                            <div className='col-md-3 float-start '>
-                                <div className=''>
-                                    <Label >ORDER KEY</Label>
-                                </div>
-                                <div className=''>
-                                    <KendoInput
-                                        type="text"
-                                        id="Customer"
-
-                                        value={outboundheaderstate.OrderKey || ""}
-                                        onChange={handleorderheaderChange}
-                                        disabled={true}
-                                    />
-                                </div>
-                            </div>  
+                        <div className='row mt-3'>
                             <div className='col-md-3 float-start '>
                                 <div className=''>
                                     <Label >CARRIER NAME</Label>
@@ -967,10 +949,6 @@ const Outbounddetail = () => {
                                     />
                                 </div>
                             </div>
-                        </div>
-
-                        <div className='row mt-3'>
-                          
                             <div className='col-md-3 float-start'>
                                 <div className=''>
                                     <Label >TRAILER OWNER</Label>
@@ -985,6 +963,8 @@ const Outbounddetail = () => {
                                     />
                                 </div>
                             </div>
+                        </div>
+                        <div className='row mt-3'>
                             <div className='col-md-3 float-start '>
                                 <div className=''>
                                     <Label >PRONUMBER</Label>
@@ -1027,9 +1007,6 @@ const Outbounddetail = () => {
                                     />
                                 </div>
                             </div>
-                        </div>
-                        <div className='row mt-3'>
-                          
                             <div className='col-md-3 float-start'>
                                 <div className=''>
                                     <Label >TOTAL QTY</Label>
@@ -1090,9 +1067,9 @@ const Outbounddetail = () => {
                 </div>
                 <div className='row mt-2'>
                     <div className='col-lg-9 col-4'></div>
-                    <div className='col-lg-3 col-8 col-sm-auto' style={{justifyContent:'flex-end'}} >
+                    <div className='col-lg-3 col-8 col-sm-auto'>
                         <button
-                            className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" 
+                            className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base"
                             onClick={visibleGrid}
                             ref={anchor}
                         >

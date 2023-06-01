@@ -9,11 +9,11 @@ import { useLocalization } from '@progress/kendo-react-intl';
 import { locales } from '../../resources/locales';
 import { Input } from "@progress/kendo-react-inputs";
 import { AppContext } from '../../AppContext'
-import Logo from "../../assets/vyapilogo1.png";
+import Logo from "../../assets/vyapilogo.png";
 
 import headerBg from '../../assets/header-bg.png';
 import userAvatar from '../../assets/mask.png';
-import burger from '../../assets/burger-icon1.png';
+import burger from '../../assets/burger-icon.png';
 import { useNavigate} from "react-router-dom";
 
 export const Header = (props) => {
@@ -62,7 +62,7 @@ export const Header = (props) => {
                 <img src={Logo} alt="Logo" width="150px" height="70px" />
                 </div>
                 <div className="menu-button"  >
-                <img className='menu-icon' src={burger} alt="" onClick={onButtonClick} />
+                <img src={burger} alt="" onClick={onButtonClick} />
                
                 </div>
                 <h2 className='header-page-title' > {pageTitle}</h2>

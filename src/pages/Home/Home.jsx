@@ -287,7 +287,7 @@ const Home = () => {
                     setLocReportCartData(response);
                     var data1 = [
                         {
-                         color :"#7D487A",
+                         color :"#573B79",
                          description: "Available Locations",
                          count : response.Availablelocations
                         },
